@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ringraziamenti Laurea Spezza</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: linear-gradient(135deg, #00d4ff 0%, #4facfe 25%, #00a8e8 50%, #0077b6 75%, #0096c7 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Container per i coriandoli */
+        .confetti-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        /* Singolo coriandolo */
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            opacity: 0.8;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+            }
+        }
+
+        /* Container principale con z-index */
+        .main-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        header {
+            background: #222;
+            background-image: url('imgs/header.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            padding: 80px 10px;
+            font-size: 36px;
+            font-weight: bold;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.9), 0px 0px 20px rgba(255,215,0,0.5);
+            border-bottom: 4px solid #ffd700;
+            box-shadow: 0px 4px 15px rgba(0,0,0,0.3);
+        }
+
+        /* Container dei bottoni */
+        .buttons-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            margin: 40px auto;
+            padding: 40px 20px;
+        }
+
+        /* Stile base dei bottoni */
+        .person-button {
+            width: 240px;
+            height: 320px;
+            border: 3px solid #ffd700;
+            border-radius: 12px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            position: relative;
+            box-shadow: 0px 8px 20px rgba(0,0,0,0.3), 0px 0px 20px rgba(255,215,0,0.4);
+            transition: all 0.3s ease;
+        }
+
+        .person-button:hover {
+            transform: scale(1.08) rotate(2deg);
+            box-shadow: 0px 12px 30px rgba(0,0,0,0.4), 0px 0px 30px rgba(255,215,0,0.6);
+            border-color: #ffed4e;
+        }
+
+        /* Nome persona al centro del bottone */
+        .person-name {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            width: 100%;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- CORIANDOLI ANIMATI -->
+    <div class="confetti-container" id="confetti"></div>
+
+    <!-- CONTENUTO PRINCIPALE -->
+    <div class="main-content">
+        <!-- HEADER -->
+        <header>
+            Ringraziamenti Laurea Spezza
+        </header>
+
+    <!-- LISTA BOTTONI -->
+    <div class="buttons-container">
+
+        <!-- Bottone 3 -->
+        <button class="person-button"
+            style="background-image: url('imgs/stefi.JPG');"
+            onclick="window.open('https://drive.google.com/file/d/1RIUnPIr2gdW9Jdrc3fO5llOjy8mVSKTL/view?usp=drive_link', '_blank')">
+            <div class="person-name">Stefi</div>
+        </button>
+
+        <!-- Bottone 1 -->
+        <button class="person-button"
+            style="background-image: url('imgs/amici.JPG');"
+            onclick="window.open('https://drive.google.com/tuoVideo1', '_blank')">
+            <div class="person-name">Enri & Mauri & Matte</div>
+        </button>
+
+        <!-- Bottone 2 -->
+        <button class="person-button"
+            style="background-image: url('imgs/gianni.JPG');"
+            onclick="window.open('https://drive.google.com/tuoVideo2', '_blank')">
+            <div class="person-name">Gianni</div>
+        </button>
+
+        <!-- Bottone 4 -->
+        <button class="person-button"
+            style="background-image: url('imgs/famiglia.JPG');"
+            onclick="window.open('https://drive.google.com/tuoVideo3', '_blank')">
+            <div class="person-name">Famiglia</div>
+        </button>
+
+        <!-- Bottone 5 -->
+        <button class="person-button"
+            style="background-image: url('imgs/stefi.JPG');"
+            onclick="window.open('https://drive.google.com/tuoVideo3', '_blank')">
+            <div class="person-name">Tonno & Andre</div>
+        </button>
+
+        <!-- Bottone 6 -->
+        <button class="person-button"
+            style="background-image: url('imgs/uni.jpg');"
+            onclick="window.open('https://drive.google.com/tuoVideo3', '_blank')">
+            <div class="person-name">Malvo & Ben & Nico</div>
+        </button>
+
+        <!-- Bottone 7 -->
+        <button class="person-button"
+            style="background-image: url('imgs/amiche_stefi.JPG');"
+            onclick="window.open('https://drive.google.com/tuoVideo3', '_blank')">
+            <div class="person-name">Silvia & GioGio & Xhesikina</div>
+        </button>
+
+        <!-- Bottone 4 -->
+        <button class="person-button"
+            style="background-image: url('imgs/calcetto.JPG');"
+            onclick="window.open('https://drive.google.com/tuoVideo3', '_blank')">
+            <div class="person-name">Calcetto</div>
+        </button>
+
+    </div>
+    </div>
+
+    <script>
+        // Genera coriandoli animati
+        const confettiContainer = document.getElementById('confetti');
+        const colors = ['#ff6b6b', '#4ecdc4', '#45b7d1', '#ffd93d', '#6bcf7f', '#ff8fb1', '#c44569', '#8e44ad'];
+        
+        for (let i = 0; i < 50; i++) {
+            const confetti = document.createElement('div');
+            confetti.classList.add('confetti');
+            confetti.style.left = Math.random() * 100 + '%';
+            confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+            confetti.style.animationDuration = (Math.random() * 3 + 5) + 's';
+            confetti.style.animationDelay = Math.random() * 5 + 's';
+            confetti.style.width = (Math.random() * 8 + 5) + 'px';
+            confetti.style.height = confetti.style.width;
+            confettiContainer.appendChild(confetti);
+        }
+    </script>
+
+</body>
+</html>
